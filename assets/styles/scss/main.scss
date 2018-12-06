@@ -2,19 +2,17 @@
 @import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import 'fonts';
 @import 'variables';
+@import 'blocks';
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic);
 
+// Main tags styles
 html,
 body {
-  min-width: 300px;
-  height: 100%;
-  margin: 0;
   padding: 0;
   font: $font_base;
 }
 h1 {
   font: $font_label_primary;
-  margin: 0;
 }
 a {
   text-decoration: none;
@@ -22,19 +20,35 @@ a {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-.clearfix {
-  overflow: hidden;
-  clear: both;
-  &::after {
-    content: '.';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
+
+//Paddings
+.padding-general {
+  padding-left: $padding-general-left_mobile;
+  padding-right: $padding-general-right_mobile;
+  padding-top: $padding-general-top_mobile;
+  padding-bottom: $padding-general-bottom_mobile;
 }
+.padding-general-header {
+  padding-left: $padding-general-left_mobile;
+  padding-right: $padding-general-right_mobile;
+  padding-top: $padding-header-top_mobile;
+  padding-bottom: $padding-header-bottom_mobile;
+}
+.padding-general-footer-bottom {
+  padding-left: $padding-general-left_mobile;
+  padding-right: $padding-general-right_mobile;
+  padding-top: $padding-general-top_mobile;
+  padding-bottom: $padding-general-bottom_mobile;
+}
+.padding-general-page-title-block {
+  padding-left: $padding-general-left_mobile;
+  padding-right: $padding-general-right_mobile;
+  padding-top: $padding-page-title-block-top_mobile;
+  padding-bottom: $padding-page-title-block-bottom_mobile;
+}
+
+//Background colors
 .primary-color {
   background-color: $bg-primary;
 }
@@ -47,59 +61,45 @@ ul {
 .secondary-color_green {
   background-color: $bg-dropdown;
 }
-.padding-general {
-  padding-left: $padding-general-left_mobile;
-  padding-right: $padding-general-right_mobile;
-  padding-top: $padding-general-top_mobile;
-  padding-bottom: $padding-general-bottom_mobile;
-}
-.padding-general_header {
-  padding-left: $padding-general-left_mobile;
-  padding-right: $padding-general-right_mobile;
-  padding-top: $padding-header-top_mobile;
-  padding-bottom: $padding-header-bottom_mobile;
-}
-.padding-general_footer-bottom {
-  padding-left: $padding-general-left_mobile;
-  padding-right: $padding-general-right_mobile;
-  padding-top: $padding-general-top_mobile;
-  padding-bottom: $padding-general-bottom_mobile;
-}
-.padding-general_page-title-block {
-  padding-left: $padding-general-left_mobile;
-  padding-right: $padding-general-right_mobile;
-  padding-top: $padding-page-title-block-top_mobile;
-  padding-bottom: $padding-page-title-block-bottom_mobile;
-}
-.font-logo {
+// Fonts
+.font-main-logo {
   font: $font_logo;
   color: $white;
 }
-.logo-block,
-.main-logo,
-.company-name{
+//Header styles
+.logo-block {
+  display: flex;
+  align-items:center;
+  .main-logo {
+    margin-right: 25px;
+  }
+  span {
+    text-transform: uppercase;
+  }
+}
+.navigation-block {
   display: inline-block;
-}
-.header-inner {
-  .logo-block {
-    display: flex;
-    align-items:center;
-    .main-logo {
-      margin-right: 25px;
-    }
-    span {
-      text-transform: uppercase;
-    }
-  }
-  .navigation-block {
+  float: right;
+  .navigation-item {
     display: inline-block;
-    float: right;
-    .navigation-item {
-      display: inline-block;
-      margin-left: 40px;
-    }
+    margin-left: 40px;
   }
 }
+//Main content styles
+
+//Footer styles
+
+
+
+
+
+
+
+
+
+
+
+
 .page-title-block {
   background-color: $bg-primary-light;
 }

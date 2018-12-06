@@ -7,20 +7,12 @@ html,
 body {
   min-width: 300px;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  font: 400 15px/18px "Open Sans", sans-serif; }
-
-h1 {
-  font: 600 34px/38px "Open Sans", sans-serif;
   margin: 0; }
 
-a {
-  text-decoration: none; }
+h1 {
+  margin: 0; }
 
 ul {
-  list-style: none;
-  padding: 0;
   margin: 0; }
 
 .clearfix {
@@ -32,6 +24,63 @@ ul {
     height: 0;
     clear: both;
     visibility: hidden; }
+
+.logo-block {
+  display: inline-block;
+  align-items: center; }
+  .logo-block .company-name {
+    display: inline-block; }
+  .logo-block .main-logo {
+    margin-right: 25px;
+    display: inline-block; }
+  .logo-block span {
+    text-transform: uppercase; }
+
+.navigation-block {
+  display: inline-block;
+  float: right; }
+  .navigation-block .navigation-item {
+    display: inline-block;
+    margin-left: 40px; }
+
+html,
+body {
+  padding: 0;
+  font: 400 15px/18px "Open Sans", sans-serif; }
+
+h1 {
+  font: 600 34px/38px "Open Sans", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.padding-general {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.padding-general-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.padding-general-footer-bottom {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.padding-general-page-title-block {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .primary-color {
   background-color: #6e7073; }
@@ -45,50 +94,22 @@ ul {
 .secondary-color_green {
   background-color: #bed33f; }
 
-.padding-general {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px; }
-
-.padding-general_header {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px; }
-
-.padding-general_footer-bottom {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px; }
-
-.padding-general_page-title-block {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px; }
-
-.font-logo {
+.font-main-logo {
   font: 700 20px/24px "FreeSetBlackC", FreeSetBlackC;
   color: #fff; }
 
-.logo-block,
-.main-logo,
-.company-name {
-  display: inline-block; }
-
-.header-inner .logo-block {
+.logo-block {
   display: flex;
   align-items: center; }
-  .header-inner .logo-block .main-logo {
+  .logo-block .main-logo {
     margin-right: 25px; }
-  .header-inner .logo-block span {
+  .logo-block span {
     text-transform: uppercase; }
-.header-inner .navigation-block {
+
+.navigation-block {
   display: inline-block;
   float: right; }
-  .header-inner .navigation-block .navigation-item {
+  .navigation-block .navigation-item {
     display: inline-block;
     margin-left: 40px; }
 
