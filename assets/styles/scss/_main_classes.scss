@@ -1,0 +1,85 @@
+@import 'variables';
+
+.clearfix {
+  overflow: hidden;
+  clear: both;
+  &::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+//Paddings
+.padding-general {
+  padding-left: $padding-general-left-mobile;
+  padding-right: $padding-general-right-mobile;
+  padding-top: $padding-general-top-mobile;
+  padding-bottom: $padding-general-bottom-mobile;
+}
+.padding-general-header {
+  padding-left: $padding-general-left-mobile;
+  padding-right: $padding-general-right-mobile;
+}
+.padding-general-footer-bottom {
+  padding-left: $padding-general-left-mobile;
+  padding-right: $padding-general-right-mobile;
+  padding-top: $padding-general-top-mobile;
+  padding-bottom: $padding-general-bottom-mobile;
+}
+.padding-general-page-title-block {
+  padding-left: $padding-general-left-mobile;
+  padding-right: $padding-general-right-mobile;
+  padding-top: $padding-page-title-block-top-mobile;
+  padding-bottom: $padding-page-title-block-bottom-mobile;
+}
+
+//Background colors
+.primary-color {
+  background-color: $bg-primary;
+}
+.primary-color-dark {
+  background-color: $bg-primary-dark;
+}
+.primary-color-light {
+  background-color: $bg-primary-light;
+}
+.secondary-color-green {
+  background-color: $bg-dropdown;
+}
+
+// Fonts
+.font-main-logo {
+  font: $font-base;
+  color: $white;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $link-primary;
+  cursor: pointer;
+  .breadcrumb-block & {
+    &:hover {
+      color: $link-primary-pressed
+    }
+  }
+  .menu-block-footer & {
+    color: $white;
+    &:hover {
+      color: $link-secondary-pressed;
+    }
+  }
+  .parent-menu & {
+    color: $black;
+  }
+  .child-menu & {
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+//Buttons

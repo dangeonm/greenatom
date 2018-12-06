@@ -1,3 +1,6 @@
+@import "../../../node_modules/susy/sass/susy";
+@import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import 'variables';
 html,
 body {
   min-width: 300px;
@@ -11,40 +14,163 @@ ul {
   margin: 0;
 }
 
-.clearfix {
-  overflow: hidden;
-  clear: both;
-  &::after {
-    content: '.';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-}
 //Header styles
-.logo-block {
-  display: inline-block;
-  align-items:center;
-  .company-name{
+.header {
+  .logo-block {
     display: inline-block;
+    height: $header-navigation;
+    .main-logo {
+      display: inline-block;
+      width: 45px;
+      height: 100%;
+    }
+    .company-name{
+      display: none;
+    }
   }
-  .main-logo {
-    margin-right: 25px;
+  .top-menu-list {
     display: inline-block;
-  }
-  span {
-    text-transform: uppercase;
+    float: right;
+    height: $header-navigation;
+    &-item {
+      display: inline-block;
+      height: 100%;
+      width: 67px;
+      position: relative;
+      img {
+        margin: 0 auto;
+        position: relative;
+      }
+    }
   }
 }
-.navigation-block {
-  display: inline-block;
-  float: right;
-  .navigation-item {
-    display: inline-block;
-    margin-left: 40px;
+.dropdown-menu-list {
+  width: 100%;
+  position: relative;
+  .dropdown-menu-navigation {
+    position: absolute;
+    top: 0;
+    display: none;
+    @include span(3);
+    .parent-menu {
+      @include span(3);
+      > li {
+        @include span(1.5 first);
+        padding-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-right: 1px solid $black;
+        &:hover {
+          background-color: $bg-dropdown-li-hover;
+        }
+      }
+      .child-menu {
+        @include span(1.5 last);
+        padding-left: 35px;
+        //height of first parent li element
+        margin-top: -38px;
+        > li {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  .dropdown-menu-search {
+    position: absolute;
+    top: 0;
+    display: none;
+    @include span(3);
   }
 }
 //Main content styles
+.dropdown-menu {
+  .menu-item {
+    margin-top: 6px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
 
 //Footer styles
+.logo-block-footer {
+  display: inline-block;
+  .logo-item {
+    display: inline-block;
+    &:first-child {
+      margin-right: 35px;
+    }
+  }
+}
+.social-media {
+  display: inline-block;
+  &-item {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-right: 17px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.form-field {
+  position: relative;
+  box-sizing: border-box;
+}
+.search-block-footer {
+  margin-top: 65px;
+  .search {
+    height: 30px;
+    width: 100%;
+  }
+  .button-submit {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 25px;
+    height: 22px;
+  }
+}
+.menu-column {
+  @include span(1.5);
+  &:last-child {
+    @include span(3 last);
+  }
+  li {
+    margin-top: 10px;
+  }
+}
+
+@include breakpoint(380px, 3) {
+  .header {
+    .logo-block {
+      .main-logo {
+        margin-right: 10px;
+      }
+      .company-name {
+        display: inline-block;
+        height: 100%;
+        line-height: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@include breakpoint(720px, 6) {
+  .logo-block-footer {
+    float: left;
+  }
+  .social-media {
+    float: right;
+  }
+  .menu-column {
+    @include span(1.5 of 6);
+    margin-top: 55px;
+    &:last-child {
+      @include span(3 of 6 last);
+    }
+  }
+}

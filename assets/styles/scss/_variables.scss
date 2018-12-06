@@ -1,18 +1,24 @@
+$susy: (
+  columns: 3,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
 // Main colors
 $white:              #fff;
 $black:              #000;
-$blue:            #007bff;
-$red:             #dc3545;
-$yellow:          #ffc107;
 $green:           #bed33f;
 $grey:            #a0a0a0;
 
 
 // Background colors
-$bg-primary:         #6e7073;
-$bg-primary-light:   #e2e2e2;
-$bg-primary-dark:    #424750;
-$bg-dropdown:        #bed33f;
+$bg-primary:           #6e7073;
+$bg-primary-light:     #e2e2e2;
+$bg-primary-dark:      #424750;
+$bg-dropdown:          #bed33f;
+$bg-dropdown-li-hover: #ecf2c6;
 
 
 // Text colors
@@ -37,17 +43,20 @@ $padding-li-bullet:               10px;
 $text-indent-li-bullet:          -17px;
 
 // Paddings mobile
-$padding-header-top_mobile:              5px;
-$padding-header-bottom_mobile:           5px;
-$padding-general-left_mobile:            15px;
-$padding-general-right_mobile:           15px;
-$padding-page-title-block-top_mobile:    15px;
-$padding-page-title-block-bottom_mobile: 15px;
-$padding-general-top_mobile:             15px;
-$padding-general-bottom_mobile:          15px;
-$padding-breadcrumb-top_mobile:          15px;
-$padding-li-bullet_mobile:               15px;
-$text-indent-li-bullet_mobile:            0px;
+$padding-header-top-mobile:              5px;
+$padding-header-bottom-mobile:           5px;
+$padding-general-left-mobile:            15px;
+$padding-general-right-mobile:           15px;
+$padding-page-title-block-top-mobile:    15px;
+$padding-page-title-block-bottom-mobile: 15px;
+$padding-general-top-mobile:             15px;
+$padding-general-bottom-mobile:          15px;
+$padding-breadcrumb-top-mobile:          15px;
+$padding-li-bullet-mobile:               15px;
+$text-indent-li-bullet-mobile:            0px;
 
-// Margins
-$dropdown-menu-item-top: 6px;
+// Fonts
+$font-base: 400 15px/18px "Open Sans", sans-serif;
+
+//Heights
+$header-navigation: 75px;
