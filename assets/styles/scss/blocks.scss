@@ -13,7 +13,9 @@ h1 {
 ul {
   margin: 0;
 }
-
+p {
+  margin: 0;
+}
 //Header styles
 .header {
   .logo-block {
@@ -44,6 +46,7 @@ ul {
     }
   }
 }
+//Top dropdown-menu styles
 .dropdown-menu-list {
   width: 100%;
   position: relative;
@@ -56,39 +59,67 @@ ul {
       @include span(3);
       > li {
         @include span(1.5 first);
-        padding-left: 25px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-right: 1px solid $black;
-        &:hover {
-          background-color: $bg-dropdown-li-hover;
-        }
       }
       .child-menu {
         @include span(1.5 last);
-        padding-left: 35px;
         //height of first parent li element
         margin-top: -38px;
-        > li {
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
       }
     }
   }
   .dropdown-menu-search {
+    display: none;
     position: absolute;
     top: 0;
-    display: none;
     @include span(3);
   }
 }
 //Main content styles
-.dropdown-menu {
-  .menu-item {
-    margin-top: 6px;
-    &:first-child {
-      margin-top: 0;
+//.dropdown-menu {
+//  .menu-item {
+//    margin-top: 6px;
+//    &:first-child {
+//      margin-top: 0;
+//    }
+//  }
+//}
+.main-page-slider {
+  height: 550px;
+  .slider-navigation {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .prev {
+      position: absolute;
+    }
+    .next {
+      position: absolute;
+    }
+    .bottom-nav {
+      position: absolute;
+    }
+  }
+}
+.main-content-blocks-list {
+  .one-column {
+    display: block;
+  }
+  .main-content-blocks-list-item {
+    height: 328px;
+    margin-top: 14px;
+    width: 100%;
+  }
+  .taxes {
+    position: relative;
+    width: 100%;
+    .expanded-description-block {
+      display: block;
+      height: 60%;
+      position: absolute;
+      bottom: 0;
+      .short-description {
+        margin-bottom: 55px;
+      }
     }
   }
 }

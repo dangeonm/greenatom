@@ -1,8 +1,5 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic);
-@font-face {
-  font-family: FreeSetBlackC;
-  src: url("FreeSetBlackC.otf"); }
 html,
 body {
   min-width: 300px;
@@ -13,6 +10,9 @@ h1 {
   margin: 0; }
 
 ul {
+  margin: 0; }
+
+p {
   margin: 0; }
 
 .header .logo-block {
@@ -66,13 +66,7 @@ ul {
         width: 50%;
         float: left;
         padding-left: 3.3333333333%;
-        padding-right: 3.3333333333%;
-        padding-left: 25px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-right: 1px solid #000; }
-        .dropdown-menu-list .dropdown-menu-navigation .parent-menu > li:hover {
-          background-color: #ecf2c6; }
+        padding-right: 3.3333333333%; }
       .dropdown-menu-list .dropdown-menu-navigation .parent-menu .child-menu {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -81,15 +75,11 @@ ul {
         float: right;
         padding-left: 3.3333333333%;
         padding-right: 3.3333333333%;
-        padding-left: 35px;
         margin-top: -38px; }
-        .dropdown-menu-list .dropdown-menu-navigation .parent-menu .child-menu > li {
-          padding-top: 10px;
-          padding-bottom: 10px; }
   .dropdown-menu-list .dropdown-menu-search {
+    display: none;
     position: absolute;
     top: 0;
-    display: none;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -98,10 +88,35 @@ ul {
     padding-left: 3.3333333333%;
     padding-right: 3.3333333333%; }
 
-.dropdown-menu .menu-item {
-  margin-top: 6px; }
-  .dropdown-menu .menu-item:first-child {
-    margin-top: 0; }
+.main-page-slider {
+  height: 550px; }
+  .main-page-slider .slider-navigation {
+    height: 100%;
+    width: 100%;
+    position: relative; }
+    .main-page-slider .slider-navigation .prev {
+      position: absolute; }
+    .main-page-slider .slider-navigation .next {
+      position: absolute; }
+    .main-page-slider .slider-navigation .bottom-nav {
+      position: absolute; }
+
+.main-content-blocks-list .one-column {
+  display: block; }
+.main-content-blocks-list .main-content-blocks-list-item {
+  height: 328px;
+  margin-top: 14px;
+  width: 100%; }
+.main-content-blocks-list .taxes {
+  position: relative;
+  width: 100%; }
+  .main-content-blocks-list .taxes .expanded-description-block {
+    display: block;
+    height: 60%;
+    position: absolute;
+    bottom: 0; }
+    .main-content-blocks-list .taxes .expanded-description-block .short-description {
+      margin-bottom: 55px; }
 
 .logo-block-footer {
   display: inline-block; }
@@ -198,24 +213,24 @@ ul {
     visibility: hidden; }
 
 .padding-general {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 15px;
   padding-bottom: 15px; }
 
 .padding-general-header {
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .padding-general-footer-bottom {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 15px;
   padding-bottom: 15px; }
 
 .padding-general-page-title-block {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 15px;
   padding-bottom: 15px; }
 
@@ -231,9 +246,20 @@ ul {
 .secondary-color-green {
   background-color: #bed33f; }
 
-.font-main-logo {
+.horizontal-block .title {
   font: 400 15px/18px "Open Sans", sans-serif;
-  color: #fff; }
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px; }
+.vertical-block .title {
+  font-size: 24px;
+  font-weight: 600; }
+
+.horizontal-block .short-description {
+  font: 400 15px/18px "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px; }
 
 a {
   text-decoration: none;
@@ -249,6 +275,15 @@ a {
     color: #000; }
   .child-menu a:hover {
     color: #fff; }
+
+.button-detail {
+  background-color: #bed33f;
+  color: #fff;
+  border: none;
+  padding: 12px 50px;
+  text-transform: uppercase;
+  font: 400 15px/18px "Open Sans", sans-serif;
+  font-weight: 600; }
 
 html,
 body {
@@ -285,11 +320,22 @@ ul {
     .header .top-menu-list .search:hover {
       background: #bed33f url(../../images/icon-search-white.png) no-repeat center center; }
 
-.dropdown-menu-list .dropdown-menu-navigation .parent-menu > li {
-  text-transform: uppercase; }
-.dropdown-menu-list .dropdown-menu-search,
-.dropdown-menu-list .dropdown-menu-navigation,
-.dropdown-menu-list .dropdown-menu-sitemap {
+.dropdown-menu-list .dropdown-menu-navigation {
+  background-color: #bed33f; }
+  .dropdown-menu-list .dropdown-menu-navigation .parent-menu > li {
+    text-transform: uppercase;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 1px solid #000; }
+    .dropdown-menu-list .dropdown-menu-navigation .parent-menu > li:hover {
+      background-color: #ecf2c6; }
+  .dropdown-menu-list .dropdown-menu-navigation .parent-menu .child-menu {
+    padding-left: 35px; }
+    .dropdown-menu-list .dropdown-menu-navigation .parent-menu .child-menu > li {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+.dropdown-menu-list .dropdown-menu-search {
   background-color: #bed33f; }
 
 .main-content {
@@ -317,6 +363,36 @@ ul {
       content: "•";
       color: #fff;
       font: 400 15px/18px "Open Sans", sans-serif; }
+  .main-content .main-content-blocks-list {
+    padding-left: 10px;
+    padding-right: 10px; }
+    .main-content .main-content-blocks-list .horizontal-block .title {
+      padding: 25px 30px;
+      text-indent: -20px; }
+    .main-content .main-content-blocks-list .horizontal-block .title::before {
+      padding-right: 10px;
+      content: "•";
+      color: #bed33f;
+      font-size: 24px;
+      font-weight: 600; }
+    .main-content .main-content-blocks-list .horizontal-block .expanded-description-block {
+      padding: 25px 30px; }
+    .main-content .main-content-blocks-list .taxes {
+      background: url(../../images/taxes-background.png) no-repeat center center; }
+      .main-content .main-content-blocks-list .taxes > .expanded-description-block {
+        background-color: #fff; }
+    .main-content .main-content-blocks-list .ai {
+      background: url(../../images/ai-background.png) no-repeat center center; }
+    .main-content .main-content-blocks-list .office-process {
+      background: url(../../images/office-process-background.png) no-repeat center center; }
+    .main-content .main-content-blocks-list .personal {
+      background: url(../../images/personal-manage-background.png) no-repeat center center; }
+    .main-content .main-content-blocks-list .center {
+      background: url(../../images/center-background.png) no-repeat center center; }
+    .main-content .main-content-blocks-list .agency {
+      background: url(../../images/agency-background.png) no-repeat center center; }
+    .main-content .main-content-blocks-list .technology {
+      background: url(../../images/technology-background.png) no-repeat center center; }
 
 .footer-bottom {
   color: #fff;

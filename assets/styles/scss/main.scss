@@ -1,7 +1,7 @@
-@font-face {
-  font-family: FreeSetBlackC;
-  src:  url('FreeSetBlackC.otf');
-}
+//@font-face {
+//  font-family: FreeSetBlackC;
+//  src:  url('FreeSetBlackC.otf');
+//}
 
 @import 'variables';
 @import 'blocks';
@@ -59,20 +59,36 @@ ul {
     }
   }
 }
+
+//Top dropdown-menu styles
 .dropdown-menu-list {
   .dropdown-menu-navigation {
+    background-color: $green;
     .parent-menu {
-      & > li {
+      > li {
         text-transform: uppercase;
+        padding-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-right: 1px solid $black;
+        &:hover {
+          background-color: $bg-dropdown-li-hover;
+        }
+      }
+      .child-menu {
+        padding-left: 35px;
+        > li {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
       }
     }
   }
-  .dropdown-menu-search,
-  .dropdown-menu-navigation,
-  .dropdown-menu-sitemap {
+  .dropdown-menu-search {
     background-color: $green;
   }
 }
+
 
 //Main content styles
 .main-content {
@@ -98,6 +114,50 @@ ul {
       content: "•";
       color: $white;
       font: $font-base;
+    }
+  }
+  .main-content-blocks-list {
+    padding-left: 10px;
+    padding-right: 10px;
+    .horizontal-block {
+      .title {
+        padding: 25px 30px;
+        text-indent: -20px;
+      }
+      .title::before {
+        padding-right: 10px;
+        content: "•";
+        color: $green;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .expanded-description-block {
+        padding: 25px 30px;
+      }
+    }
+    .taxes {
+      background: url(../../images/taxes-background.png) no-repeat center center;
+      > .expanded-description-block {
+        background-color: $white;
+      }
+    }
+    .ai {
+      background: url(../../images/ai-background.png) no-repeat center center;
+    }
+    .office-process {
+      background: url(../../images/office-process-background.png) no-repeat center center;
+    }
+    .personal {
+      background: url(../../images/personal-manage-background.png) no-repeat center center;
+    }
+    .center {
+      background: url(../../images/center-background.png) no-repeat center center;
+    }
+    .agency {
+      background: url(../../images/agency-background.png) no-repeat center center;
+    }
+    .technology {
+      background: url(../../images/technology-background.png) no-repeat center center;
     }
   }
 }
@@ -130,11 +190,6 @@ ul {
     border: none;
     background: url(../../images/icon-search-form.png) no-repeat 0 0;
 
-  }
-  .menu-block-footer {
-    a {
-      font-;
-    }
   }
 }
 
