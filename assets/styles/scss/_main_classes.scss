@@ -14,26 +14,26 @@
 
 //Paddings
 .padding-general {
-  padding-left: $padding-general-left-mobile;
-  padding-right: $padding-general-right-mobile;
-  padding-top: $padding-general-top-mobile;
-  padding-bottom: $padding-general-bottom-mobile;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .padding-general-header {
-  padding-left: $padding-general-left-mobile;
-  padding-right: $padding-general-right-mobile;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .padding-general-footer-bottom {
-  padding-left: $padding-general-left-mobile;
-  padding-right: $padding-general-right-mobile;
-  padding-top: $padding-general-top-mobile;
-  padding-bottom: $padding-general-bottom-mobile;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .padding-general-page-title-block {
-  padding-left: $padding-general-left-mobile;
-  padding-right: $padding-general-right-mobile;
-  padding-top: $padding-page-title-block-top-mobile;
-  padding-bottom: $padding-page-title-block-bottom-mobile;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 //Background colors
@@ -53,7 +53,6 @@
 // Fonts
 .title {
   .horizontal-block & {
-    font: $font-base;
     font-size: 24px;
     font-weight: 600;
     line-height: 24px;
@@ -61,6 +60,27 @@
   .vertical-block & {
     font-size: 24px;
     font-weight: 600;
+    line-height: 24px;
+  }
+}
+.media-archive-title {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.no-dot-title {
+  .vertical-block & {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+.date {
+  .vertical-block & {
+    font: $font-base;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
   }
 }
 .short-description {
@@ -70,6 +90,12 @@
     font-weight: 300;
     line-height: 16px;
   }
+}
+.font-white {
+  color: $white;
+}
+.font-black {
+  color: $black;
 }
 
 // Links
@@ -100,11 +126,53 @@ a {
 
 //Buttons
 .button-detail {
-  background-color: $green;
-  color: $white;
-  border: none;
-  padding: 12px 50px;
-  text-transform: uppercase;
-  font: $font-base;
-  font-weight: 600;
+  .horizontal-block & {
+    background-color: $green;
+    color: $white;
+    border: none;
+    padding: 12px 50px;
+    text-transform: uppercase;
+    font: $font-base;
+    font-weight: 600;
+  }
+  .vertical-block & {
+    color: $white;
+    border: 1px solid $white;
+    padding: 12px 50px;
+    text-transform: uppercase;
+    font: $font-base;
+    font-weight: 600;
+  }
+}
+
+@include breakpoint(720px, 6) {
+  .padding-general,
+  .padding-general-header,
+  .padding-general-footer-bottom,
+  .padding-general-page-title-block {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  .short-description {
+    .horizontal-block & {
+      font: $font-base;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 16px;
+    }
+  }
+}
+
+@include breakpoint(1200px, 12) {
+  .padding-general,
+  .padding-general-header,
+  .padding-general-footer-bottom,
+  .padding-general-page-title-block {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .padding-general {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
 }
