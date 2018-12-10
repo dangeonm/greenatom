@@ -162,11 +162,16 @@ p {
     padding-left: 3.3333333333%;
     padding-right: 3.3333333333%; }
 
-.main-content-list .one-column {
+.one-column {
   display: block; }
+
+.two-columns {
+  display: none; }
+
 .main-content-list .horizontal-block {
   max-width: 328px;
-  margin: 15px auto 0 auto; }
+  margin: 15px auto 0 auto;
+  height: 328px; }
   .main-content-list .horizontal-block .expanded-description-block {
     display: none;
     height: 60%;
@@ -176,6 +181,7 @@ p {
       margin-bottom: 55px; }
 .main-content-list .vertical-block {
   max-width: 328px;
+  height: 328px;
   margin: 15px auto 0 auto; }
   .main-content-list .vertical-block .expanded-description-block {
     display: none;
@@ -194,8 +200,6 @@ p {
     margin-bottom: 37px; }
   .main-content-list .news-block .expanded-description-block .date {
     margin-bottom: 20px; }
-.main-content-list .main-content-list-item {
-  height: 328px; }
 .main-content-list .taxes,
 .main-content-list .ai,
 .main-content-list .personal,
@@ -221,7 +225,6 @@ p {
 .main-content-list .news-archive-icon,
 .main-content-list .greenatom-icon {
   display: block;
-  padding-top: 65px;
   margin: 0 auto 50px auto; }
 .main-content-list .vk,
 .main-content-list .facebook,
@@ -297,7 +300,7 @@ p {
     vertical-align: middle; } }
 @media (min-width: 720px) {
   .main-content-list .horizontal-block {
-    width: 670px;
+    width: 100%;
     max-width: 670px;
     margin: 15px auto 0 auto; }
     .main-content-list .horizontal-block .expanded-description-block {
@@ -382,6 +385,20 @@ p {
   .search-block-footer {
     margin-top: 30px; } }
 @media (min-width: 1200px) {
+  .one-column {
+    display: none; }
+
+  .two-columns {
+    display: block; }
+
+  .first-column {
+    max-width: 564px;
+    float: left; }
+
+  .second-column {
+    max-width: 564px;
+    float: right; }
+
   .header .top-menu-block .navigation-list {
     display: inline-block;
     height: 75px; }
@@ -404,6 +421,9 @@ p {
       content: " "; }
   .header .top-menu-block .top-menu-list .navigation {
     display: none; }
+
+  .main-content-list .horizontal-block {
+    max-width: 564px; }
 
   .menu-column {
     -moz-box-sizing: border-box;
@@ -687,53 +707,58 @@ ul {
       content: "•";
       color: #fff;
       font: 400 15px/18px "Open Sans", sans-serif; }
-  .main-content .work li::before {
-    padding-right: 10px;
-    content: "•";
-    color: #fff;
-    font: 400 15px/18px "Open Sans", sans-serif; }
-  .main-content .one-column .taxes {
+  .main-content .news-archive {
+    padding-top: 65px; }
+  .main-content .work {
+    padding-top: 65px;
+    background-color: #b7ce44; }
+    .main-content .work:hover {
+      background: #bdd933; }
+    .main-content .work li::before {
+      padding-right: 10px;
+      content: "•";
+      color: #fff;
+      font: 400 15px/18px "Open Sans", sans-serif; }
+  .main-content .taxes {
     background: url(../../images/taxes-background.png) no-repeat center center; }
-  .main-content .one-column .ai {
+  .main-content .ai {
     background: url(../../images/ai-background-mob.png) no-repeat center center; }
-    .main-content .one-column .ai:hover {
+    .main-content .ai:hover {
       cursor: pointer;
       background: #216c8a; }
-  .main-content .one-column .office-process {
+  .main-content .office-process {
     background: url(../../images/office-process-background-mob.png) no-repeat center center; }
-  .main-content .one-column .personal {
+  .main-content .personal {
     background: url(../../images/personal-manage-background.png) no-repeat center center; }
-  .main-content .one-column .center {
+  .main-content .center {
     background: url(../../images/center-background-mob.png) no-repeat center center; }
-  .main-content .one-column .agency {
+  .main-content .agency {
     background: url(../../images/agency-background-mob.png) no-repeat center center; }
-  .main-content .one-column .technology {
+  .main-content .technology {
     background: url(../../images/technology-background.png) no-repeat center center; }
-  .main-content .one-column .news-first {
+  .main-content .news-first {
     background: url(../../images/news-1-mob.png) no-repeat center center; }
-    .main-content .one-column .news-first:hover {
+    .main-content .news-first:hover {
       cursor: pointer;
       background: #dd9665; }
-  .main-content .one-column .news-archive {
+  .main-content .news-archive {
     background-color: #5978b6; }
-    .main-content .one-column .news-archive:hover {
+    .main-content .news-archive:hover {
       cursor: pointer;
       background: #496299; }
-  .main-content .one-column .media-archive {
+  .main-content .media-archive {
     background-color: #5978b6; }
-  .main-content .one-column .work {
-    background-color: #bed33f; }
-  .main-content .one-column .social-media .vk {
+  .main-content .social-media .vk {
     background: url(../../images/social-vk-inactive.png) no-repeat center center; }
-    .main-content .one-column .social-media .vk:hover {
+    .main-content .social-media .vk:hover {
       background: url(../../images/social-vk-active.png) no-repeat center center; }
-  .main-content .one-column .social-media .facebook {
+  .main-content .social-media .facebook {
     background: url(../../images/social-fb-inactive.png) no-repeat center center; }
-    .main-content .one-column .social-media .facebook:hover {
+    .main-content .social-media .facebook:hover {
       background: url(../../images/social-fb-active.png) no-repeat center center; }
-  .main-content .one-column .social-media .instagram {
+  .main-content .social-media .instagram {
     background: url(../../images/social-inst-inactive-mob.png) no-repeat center center; }
-    .main-content .one-column .social-media .instagram:hover {
+    .main-content .social-media .instagram:hover {
       background: url(../../images/social-inst-active-mob.png) no-repeat center center; }
   .main-content .main-content-list {
     padding-left: 10px;

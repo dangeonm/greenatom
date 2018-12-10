@@ -178,14 +178,17 @@ p {
 //    }
 //  }
 //}
-
+.one-column {
+  display: block;
+}
+.two-columns {
+  display: none;
+}
 .main-content-list {
-  .one-column {
-    display: block;
-  }
   .horizontal-block {
     max-width: 328px;
     margin: 15px auto 0 auto;
+    height: 328px;
     .expanded-description-block {
       display: none;
       height: 60%;
@@ -198,6 +201,7 @@ p {
   }
   .vertical-block {
     max-width: 328px;
+    height: 328px;
     margin: 15px auto 0 auto;
     .expanded-description-block {
       display: none;
@@ -225,9 +229,6 @@ p {
       }
     }
   }
-  .main-content-list-item {
-    height: 328px;
-  }
   .taxes,
   .ai,
   .personal,
@@ -248,7 +249,6 @@ p {
   .news-archive-icon,
   .greenatom-icon {
     display: block;
-    padding-top: 65px;
     margin: 0 auto 50px auto;
   }
   .vk,
@@ -336,7 +336,7 @@ p {
 @include breakpoint(720px, 6) {
   .main-content-list {
     .horizontal-block {
-      width: 670px;
+      width: 100%;
       max-width: 670px;
       margin: 15px auto 0 auto;
       .expanded-description-block {
@@ -408,6 +408,20 @@ p {
 }
 
 @include breakpoint(1200px, 12) {
+  .one-column {
+    display: none;
+  }
+  .two-columns {
+    display: block;
+  }
+  .first-column {
+    max-width: 564px;
+    float: left;
+  }
+  .second-column {
+    max-width: 564px;
+    float: right;
+  }
   .header {
     .top-menu-block {
       .navigation-list {
@@ -441,7 +455,12 @@ p {
       }
     }
   }
-
+  //main page styles
+  .main-content-list {
+    .horizontal-block {
+      max-width: 564px;
+    }
+  }
   // Footer styles
   .menu-column {
     @include span(1.7 of 7);

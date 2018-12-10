@@ -122,7 +122,15 @@ ul {
       font: $font-base;
     }
   }
+  .news-archive {
+    padding-top: 65px;
+  }
   .work {
+    padding-top: 65px;
+    background-color: #b7ce44;
+    &:hover {
+      background: #bdd933;
+    }
     li::before {
       padding-right: $padding-li-bullet;
       content: "•";
@@ -130,70 +138,65 @@ ul {
       font: $font-base;
     }
   }
-  .one-column {
-    .taxes {
-      background: url(../../images/taxes-background.png) no-repeat center center;
+  .taxes {
+    background: url(../../images/taxes-background.png) no-repeat center center;
+  }
+  .ai {
+    background: url(../../images/ai-background-mob.png) no-repeat center center;
+    &:hover {
+      cursor: pointer;
+      background: #216c8a;
     }
-    .ai {
-      background: url(../../images/ai-background-mob.png) no-repeat center center;
+  }
+  .office-process {
+    background: url(../../images/office-process-background-mob.png) no-repeat center center;
+  }
+  .personal {
+    background: url(../../images/personal-manage-background.png) no-repeat center center;
+  }
+  .center {
+    background: url(../../images/center-background-mob.png) no-repeat center center;
+  }
+  .agency {
+    background: url(../../images/agency-background-mob.png) no-repeat center center;
+  }
+  .technology {
+    background: url(../../images/technology-background.png) no-repeat center center;
+  }
+  .news-first {
+    background: url(../../images/news-1-mob.png) no-repeat center center;
+    &:hover {
+      cursor: pointer;
+      background: #dd9665;
+    }
+  }
+  .news-archive {
+    background-color: #5978b6;
+    &:hover {
+      cursor: pointer;
+      background: #496299;
+    }
+  }
+  .media-archive {
+    background-color: #5978b6;
+  }
+  .social-media {
+    .vk {
+      background: url(../../images/social-vk-inactive.png) no-repeat center center;
       &:hover {
-        cursor: pointer;
-        background: #216c8a;
+        background: url(../../images/social-vk-active.png) no-repeat center center;
       }
     }
-    .office-process {
-      background: url(../../images/office-process-background-mob.png) no-repeat center center;
-    }
-    .personal {
-      background: url(../../images/personal-manage-background.png) no-repeat center center;
-    }
-    .center {
-      background: url(../../images/center-background-mob.png) no-repeat center center;
-    }
-    .agency {
-      background: url(../../images/agency-background-mob.png) no-repeat center center;
-    }
-    .technology {
-      background: url(../../images/technology-background.png) no-repeat center center;
-    }
-    .news-first {
-      background: url(../../images/news-1-mob.png) no-repeat center center;
+    .facebook {
+      background: url(../../images/social-fb-inactive.png) no-repeat center center;
       &:hover {
-        cursor: pointer;
-        background: #dd9665;
+        background: url(../../images/social-fb-active.png) no-repeat center center;
       }
     }
-    .news-archive {
-      background-color: #5978b6;
+    .instagram {
+      background: url(../../images/social-inst-inactive-mob.png) no-repeat center center;
       &:hover {
-        cursor: pointer;
-        background: #496299;
-      }
-    }
-    .media-archive {
-      background-color: #5978b6;
-    }
-    .work {
-      background-color: $green;
-    }
-    .social-media {
-      .vk {
-        background: url(../../images/social-vk-inactive.png) no-repeat center center;
-        &:hover {
-          background: url(../../images/social-vk-active.png) no-repeat center center;
-        }
-      }
-      .facebook {
-        background: url(../../images/social-fb-inactive.png) no-repeat center center;
-        &:hover {
-          background: url(../../images/social-fb-active.png) no-repeat center center;
-        }
-      }
-      .instagram {
-        background: url(../../images/social-inst-inactive-mob.png) no-repeat center center;
-        &:hover {
-          background: url(../../images/social-inst-active-mob.png) no-repeat center center;
-        }
+        background: url(../../images/social-inst-active-mob.png) no-repeat center center;
       }
     }
   }
@@ -300,5 +303,12 @@ ul {
     li {
       text-indent: $text-indent-li-bullet;
     }
+  }
+}
+
+@include breakpoint(1200px, 12) {
+  .main-content {
+
+
   }
 }
