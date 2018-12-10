@@ -30,18 +30,23 @@ p {
       display: none;
     }
   }
-  .top-menu-list {
+  .top-menu-block {
     display: inline-block;
-    float: right;
-    height: $header-navigation;
-    &-item {
+    .navigation-list {
+      display: none;
+    }
+    .top-menu-list {
       display: inline-block;
-      height: 100%;
-      width: 67px;
-      position: relative;
-      img {
-        margin: 0 auto;
+      height: $header-navigation;
+      &-item {
+        display: inline-block;
+        height: 100%;
+        width: 67px;
         position: relative;
+        img {
+          margin: 0 auto;
+          position: relative;
+        }
       }
     }
   }
@@ -128,13 +133,12 @@ p {
 .logo-block-footer {
   display: inline-block;
   .logo-item {
+    margin-bottom: 15px;
     display: inline-block;
-    &:first-child {
-      margin-right: 35px;
-    }
+    margin-right: 15px;
   }
 }
-.social-media {
+.social-media-list {
   display: inline-block;
   &-item {
     display: inline-block;
@@ -151,7 +155,7 @@ p {
   box-sizing: border-box;
 }
 .search-block-footer {
-  margin-top: 65px;
+  margin-top: 15px;
   .search {
     height: 30px;
     width: 100%;
@@ -167,6 +171,7 @@ p {
 .menu-column {
   @include span(1.5);
   &:last-child {
+    margin-top: 15px;
     @include span(3 last);
   }
   li {
@@ -194,7 +199,7 @@ p {
   .logo-block-footer {
     float: left;
   }
-  .social-media {
+  .social-media-list {
     float: right;
   }
   .menu-column {
@@ -202,6 +207,47 @@ p {
     margin-top: 55px;
     &:last-child {
       @include span(3 of 6 last);
+      margin-top: 55px;
+    }
+  }
+  .search-block-footer {
+    margin-top: 55px;
+  }
+}
+
+@include breakpoint(1200px, 12) {
+  .header {
+    .top-menu-block {
+      float: right;
+      .navigation-list {
+        display: inline-block;
+        height: 75px;
+        &-item {
+          display: inline-block;
+          text-transform: uppercase;
+          height: 100%;
+          line-height: 100%;
+          vertical-align: middle;
+          color: $white;
+          font-size: 13px;
+        }
+        .navigation-list-item::before {
+          padding-right: 10px;
+          padding-left: 10px;
+          content: "•";
+          color: $green;
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .navigation-list-item:first-child:before {
+          content: " ";
+        }
+      }
+      .top-menu-list {
+        .navigation {
+          display: none;
+        }
+      }
     }
   }
 }

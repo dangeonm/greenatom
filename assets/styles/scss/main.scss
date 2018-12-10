@@ -166,7 +166,13 @@ ul {
   color: $white;
   text-align: center;
 }
-.social-media {
+.logo-block-footer {
+  vertical-align: top;
+  .logo-item {
+    vertical-align: top;
+  }
+}
+.social-media-list {
   &-item {
     border-radius: 50%;
   }
@@ -192,6 +198,12 @@ ul {
 
   }
 }
+.menu-column {
+  padding: 0;
+  &:last-child {
+    padding: 0;
+  }
+}
 
 @include breakpoint(720px, 6) {
   .padding-general {
@@ -205,10 +217,10 @@ ul {
     padding-right: $padding-general-right;
   }
   .padding-general-footer-bottom {
-    padding-left: $padding-general-left;
-    padding-right: $padding-general-right;
-    padding-top: $padding-general-top;
-    padding-bottom: $padding-general-bottom;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
   .padding-general-page-title-block {
     padding-left: $padding-general-left;
