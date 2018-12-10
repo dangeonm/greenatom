@@ -94,6 +94,10 @@ ul {
 
 //Main content styles
 .main-content {
+  .main-page-slider {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   background: #dedede; /* Old browsers */
   background: -moz-linear-gradient(top, #dedede 0%, #e2e4da 45%, #dfe2cc 66%, #d7dfa7 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #dedede 0%,#e2e4da 45%,#dfe2cc 66%,#d7dfa7 100%); /* Chrome10-25,Safari5.1-6 */

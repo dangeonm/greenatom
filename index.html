@@ -66,9 +66,12 @@
         <div class="dropdown-menu-sitemap"></div>
     </div>
     <div id="main-content" class="main-content">
-        <div class="main-page-slider">
-
+        <div class="owl-carousel owl-theme owl_carousel_simple">
+            <img src="assets/images/slider-map.png"/>
+            <div class="item"></div>
+            <div class="item"></div>
         </div>
+
         <div class="one-column">
             <div class="main-content-list one-column clearfix">
                 <div class="main-content-list-item horizontal-block taxes">
@@ -287,4 +290,19 @@
     </div>
 </div>
 </body>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="node_modules/owl.carousel/dist/owl.carousel.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel();
+    });
+</script>
+<script>
+    $('.owl-carousel').owlCarousel({
+        margin: 10,
+        loop: true,
+        items: 1,
+        stagePadding: 100
+    })
+</script>
 </html>

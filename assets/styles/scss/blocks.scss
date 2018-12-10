@@ -1,11 +1,14 @@
 @import "../../../node_modules/susy/sass/susy";
 @import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "../../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "../../../node_modules/owl.carousel/dist/assets/owl.theme.default.css";
 @import 'variables';
 html,
 body {
   min-width: 300px;
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 h1 {
   margin: 0;
@@ -15,6 +18,92 @@ ul {
 }
 p {
   margin: 0 0 15px 0;
+}
+
+//Owl-carousel styles
+.owl_carousel_simple {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px 0;
+  .owl-dots {
+    bottom: -10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    span {
+      background: grey;
+      border-radius: 100%;
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+    }
+  }
+}
+.owl-nav {
+  position: absolute;
+  top: calc(50% - 30px);
+  width: 100%;
+  z-index: 1;
+  * {
+    display: block;
+    height: 60px;
+    width: 60px;
+  }
+}
+.owl-prev {
+  //background: image-url('arrow_carousel_prev.png') no-repeat 0 0;
+  float: left;
+  margin-left: 10px;
+  opacity: .4;
+  &:hover {
+    opacity: 1;
+  }
+  .icon-arrow-left7 {
+    position: relative;
+    .material-icons {
+      left: 4px;
+      opacity: 1;
+      position: absolute;
+      top: 39px;
+    }
+  }
+}
+.owl-next {
+  //background: image-url('arrow_carousel_next.png') no-repeat 0 0;
+  float: right;
+  margin-right: 10px;
+  opacity: .4;
+  &:hover {
+    opacity: 1;
+  }
+  .icon-arrow-right7 {
+    position: relative;
+    .material-icons {
+      left: 4px;
+      opacity: 1;
+      position: absolute;
+      top: 39px;
+    }
+  }
+}
+.owl-dot {
+  display: inline-block;
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.active {
+    span {
+      background: red;
+    }
+  }
+}
+
+
+.item {
+  width: 400px;
+  height: 400px;
+  background-color: #003f54;
 }
 //Header styles
 .header {
@@ -90,23 +179,6 @@ p {
 //  }
 //}
 
-
-//.main-page-slider {
-//  .slider-navigation {
-//    height: 100%;
-//    width: 100%;
-//    position: relative;
-//    .prev {
-//      position: absolute;
-//    }
-//    .next {
-//      position: absolute;
-//    }
-//    .bottom-nav {
-//      position: absolute;
-//    }
-//  }
-//}
 .main-content-list {
   .one-column {
     display: block;
