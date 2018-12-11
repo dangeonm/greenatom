@@ -77,11 +77,13 @@ ul {
           background-color: $bg-dropdown-li-hover;
         }
       }
-      .child-menu {
-        padding-left: 35px;
-        > li {
-          padding-top: 10px;
-          padding-bottom: 10px;
+    }
+    .child-menu {
+      padding-left: 35px;
+
+      li {
+        &:hover {
+          color: $white;
         }
       }
     }
@@ -139,7 +141,7 @@ ul {
     }
   }
   .taxes {
-    background: url(../../images/taxes-background.png) no-repeat center center;
+    background: url(../../images/taxes-mob.png) no-repeat center center;
   }
   .ai {
     background: url(../../images/ai-background-mob.png) no-repeat center center;
@@ -201,8 +203,6 @@ ul {
     }
   }
   .main-content-list {
-    padding-left: 10px;
-    padding-right: 10px;
     .horizontal-block {
       .expanded-description-block {
         padding: 25px 30px;
@@ -214,9 +214,41 @@ ul {
         padding: 15px 30px;
       }
     }
+    .news-second-expanded-description-inner,
+    .news-third-expanded-description-inner,
+    .news-fourth-expanded-description-inner {
+      padding: 75px 25px 75px 40px;
+    }
     .news-block {
       .expanded-description-block {
         padding: 85px 30px 0 30px;
+      }
+      .date-block {
+        background: url(../../images/icon-calendar-white.png) no-repeat 0 center;
+        padding-left: 25px;
+      }
+    }
+    .news-second {
+      .date-block {
+        background: url(../../images/icon-calendar.png) no-repeat 0 center;
+      }
+    }
+    .news-fourth {
+      background: url(../../images/news-4-back.png) no-repeat 0 center;
+      &:hover {
+        background: #16b9b7;
+      }
+      .date-block {
+        background: url(../../images/icon-calendar-white.png) no-repeat 0 center;
+      }
+    }
+    .news-third {
+      background-color: $white;
+      &:hover {
+        background-color: #5f7dc1;
+      }
+      .date-block {
+        background: url(../../images/icon-calendar.png) no-repeat 0 center;
       }
     }
     .title {
@@ -234,6 +266,14 @@ ul {
       font-weight: 600;
     }
   }
+}
+.rewards-title {
+  font-size: 32px;
+  font-weight: 300;
+}
+.rewards-inner {
+  padding-top: 35px;
+  padding-left: 40px;
 }
 //Footer styles
 .footer-bottom {
@@ -260,7 +300,8 @@ ul {
     background: $green url(../../images/icon-inst-white.png) no-repeat center center;
   }
 }
-.search-block-footer {
+.search-block-footer,
+.dropdown-menu-search {
   .search {
     border-radius: 3px;
     padding-left: 15px;
@@ -290,8 +331,6 @@ ul {
   }
   .main-content {
     .main-content-list {
-      padding-left: 25px;
-      padding-right: 25px;
       .horizontal-block {
         .expanded-description-block {
           padding: 25px 75px 25px 30px;
@@ -308,7 +347,82 @@ ul {
 
 @include breakpoint(1200px, 12) {
   .main-content {
-
-
+    .taxes {
+      background: url(../../images/taxes-background-desk.png) no-repeat center center;
+    }
+    .ai {
+      background: url(../../images/ai-background-desk.png) no-repeat center center;
+      &:hover {
+        cursor: pointer;
+        background: #216c8a;
+      }
+    }
+    .office-process {
+      background: url(../../images/office-process-background-desk.png) no-repeat center center;
+    }
+    .personal {
+      background: url(../../images/personal-manage-background-desk.png) no-repeat center center;
+    }
+    .center {
+      background: url(../../images/center-background-desk.png) no-repeat center center;
+    }
+    .agency {
+      background: url(../../images/agency-background-desk.png) no-repeat center center;
+    }
+    .technology {
+      background: url(../../images/technology-background-desk.png) no-repeat center center;
+    }
+    .news-first {
+      background: url(../../images/news-1-desk.png) no-repeat center center;
+      &:hover {
+        background: url(../../images/news-1-desk.png) no-repeat center center;
+      }
+    }
+    .news-second-image {
+      background: url(../../images/news-2-back.png) no-repeat center center;
+      height: 145px;
+    }
+    .news-description-inner {
+      padding-left: 52px;
+      padding-top: 75px;
+    }
+    .news-first-description {
+      cursor: pointer;
+      background: #dfaa85;
+      &:hover {
+        cursor: pointer;
+        background: #dd9665;
+      }
+    }
+    .news-archive {
+      background-color: #5978b6;
+      &:hover {
+        cursor: pointer;
+        background: #496299;
+      }
+    }
+    .media-archive {
+      background-color: #5978b6;
+    }
+    .social-media {
+      .vk {
+        background: url(../../images/social-vk-inactive.png) no-repeat center center;
+        &:hover {
+          background: url(../../images/social-vk-active.png) no-repeat center center;
+        }
+      }
+      .facebook {
+        background: url(../../images/social-fb-inactive.png) no-repeat center center;
+        &:hover {
+          background: url(../../images/social-fb-active.png) no-repeat center center;
+        }
+      }
+      .instagram {
+        background: url(../../images/social-inst-inactive-mob.png) no-repeat center center;
+        &:hover {
+          background: url(../../images/social-inst-active-mob.png) no-repeat center center;
+        }
+      }
+    }
   }
 }
