@@ -256,6 +256,9 @@ p {
   position: relative;
   box-sizing: border-box; }
 
+.dropdown-menu-sitemap {
+  display: none; }
+
 .dropdown-menu-search .dropdown-menu-search-inner {
   padding: 20px; }
 .dropdown-menu-search .search {
