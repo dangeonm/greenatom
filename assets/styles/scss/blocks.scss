@@ -137,6 +137,9 @@ p {
     .top-menu-list {
       display: inline-block;
       height: $header-navigation;
+      .sitemap {
+        display: none;
+      }
       .top-menu-list-item .search {
         &:hover {
           .dropdown-menu-search {
@@ -360,6 +363,15 @@ p {
 }
 
 @include breakpoint(720px, 6) {
+  .header {
+    .top-menu-block {
+      .top-menu-list {
+        .sitemap {
+          display: inline-block;
+        }
+      }
+    }
+  }
   .dropdown-menu-search {
     width: 100%;
     .dropdown-menu-search-inner {
