@@ -96,6 +96,9 @@ ul {
 
 //Main content styles
 .main-content {
+  .one-column {
+    padding-bottom: 65px;
+  }
   .main-page-slider {
     padding-right: 10px;
     padding-left: 10px;
@@ -149,6 +152,9 @@ ul {
       cursor: pointer;
       background: #216c8a;
     }
+  }
+  .clients-slider {
+    background-color: #5978b6;
   }
   .office-process {
     background: url(../../images/office-process-background-mob.png) no-repeat center center;

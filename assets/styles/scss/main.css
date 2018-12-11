@@ -130,7 +130,7 @@ p {
   .dropdown-menu-list .dropdown-menu-navigation {
     position: absolute;
     top: 0;
-    display: block;
+    display: none;
     z-index: 3;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -795,6 +795,8 @@ ul {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#d7dfa7',GradientType=0 );
   /* IE6-9 */ }
+  .main-content .one-column {
+    padding-bottom: 65px; }
   .main-content .main-page-slider {
     padding-right: 10px;
     padding-left: 10px; }
@@ -831,6 +833,8 @@ ul {
     .main-content .ai:hover {
       cursor: pointer;
       background: #216c8a; }
+  .main-content .clients-slider {
+    background-color: #5978b6; }
   .main-content .office-process {
     background: url(../../images/office-process-background-mob.png) no-repeat center center; }
   .main-content .personal {
